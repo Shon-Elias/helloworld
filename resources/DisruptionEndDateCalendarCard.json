@@ -1,0 +1,57 @@
+
+{
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.0",
+	"body": [
+
+		{
+			"type": "Container",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "Would you like to enter the Distruption End Date (if known)",
+					"size": "Medium",
+					"wrap": true
+				}
+			]
+		}
+	],
+	"actions": [
+		{
+
+				"type": "Action.Submit",
+
+				"title": "Later",
+				"value": "I'll do it later"
+		},
+
+		{
+			"type": "Action.ShowCard",
+      "title": "Set end date",
+			"card": {
+				"type": "AdaptiveCard",
+				"body": [
+					{
+						"type": "Input.Date",
+						"id": "endDate"
+					}
+				],
+				"actions": [
+					{
+						"type": "Action.Submit",
+
+						"title": "Ok",
+						"value": "Ok"
+
+
+                    }
+
+				]
+			}
+    }
+
+
+	]
+}
+

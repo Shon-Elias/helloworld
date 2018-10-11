@@ -1,0 +1,44 @@
+
+{
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.0",
+	"body": [
+
+		{
+			"type": "Container",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "Please enter the disruption start date:",
+					"size": "Medium",
+					"wrap": true
+				}
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.ShowCard",
+			"title": "Set start date",
+			"card": {
+				"type": "AdaptiveCard",
+				"body": [
+					{
+						"type": "Input.Date",
+						"id": "disruptionStartDate"
+					}
+				],
+				"actions": [
+					{
+						"type": "Action.Submit",
+						"text": "OK",
+						"title": "OK",
+						"value": "Saved start date"
+					}
+				]
+			}
+		}
+	]
+}
+

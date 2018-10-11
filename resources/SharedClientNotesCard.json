@@ -1,0 +1,33 @@
+{
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.0",
+	"body": [
+		{
+"type": "Input.ChoiceSet",
+						"id": "shareDocument",
+						"style": "expanded",
+						"isMultiSelect": true,
+						"choices": [
+							{
+								"title": "Share my notes with client's Resident Manager",
+								"value": "Resident Manage"
+							},
+                            {
+								"title": "Share my notes with client's Clinical Team",
+								"value": "Clinical Team"
+							},
+                            {
+								"title": "Save my notes to client's myEvolv care record",
+								"value": "myEvolv care record"
+							}
+						]
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.Submit",
+			"title": "Submit"
+		}
+	]
+}

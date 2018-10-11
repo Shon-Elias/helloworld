@@ -1,0 +1,43 @@
+
+{
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.0",
+	"body": [
+
+		{
+			"type": "Container",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "So we can do a quick search of myEvolv for service notes that still need to be entered. Please select the myEvolv Service Entry Date you would like to submit:",
+					"size": "Medium",
+					"wrap": true
+				}
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.ShowCard",
+			"title": "Set entry date",
+			"card": {
+				"type": "AdaptiveCard",
+				"body": [
+					{
+						"type": "Input.Date",
+						"id": "entryDate"
+					}
+				],
+				"actions": [
+					{
+						"type": "Action.Submit",
+						"text": "OK",
+						"title": "OK",
+						"value": "Entry date updated succesfully"
+					}
+				]
+			}
+		}
+	]
+}

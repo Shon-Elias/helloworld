@@ -1,0 +1,50 @@
+
+{
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.0",
+	"body": [
+
+		{
+			"type": "Container",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "Hmmm, I am a little confused ... You've entered an END date earlier than your START date.  Please re-enter a valid END DATE.",
+					"size": "Medium",
+					"wrap": true
+				}
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.ShowCard",
+      "title": "Change end date",
+			"card": {
+				"type": "AdaptiveCard",
+				"body": [
+					{
+						"type": "Input.Date",
+						"id": "validEndDate"
+					}
+				],
+				"actions": [
+					{
+						"type": "Action.Submit",
+						"text": "Ok",
+						"title": "Ok",
+						"value": "Ok"
+          }
+				]
+			}
+    },
+		{
+			"type": "Action.Submit",
+			"text": "No, that's fine",
+			"title": "No, that's fine",
+			"value": "No, that's fine"
+		}
+	]
+}
+
